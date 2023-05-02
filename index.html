@@ -243,8 +243,8 @@
                 }
                 else
                 {
-                    let weight = prompt("enter weight of edge");
-                    if(weight !== null)
+                    let weight = prompt("enter weight of edge(>0)");
+                    if(weight !== null && weight>0)
                     {
                         weight = Number(weight);
                         let line = document.createElementNS("http://www.w3.org/2000/svg", "line");
