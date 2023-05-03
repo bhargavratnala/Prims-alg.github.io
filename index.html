@@ -163,6 +163,44 @@
             color: rgba(0, 0, 0, 0.7);
             transform: scaleX(0.1), scaleY(0.5);
         }
+        .tutorial
+        {
+            display: inline;
+            position: absolute;
+            width: fit-content;
+            top: 40px;
+            left: 45px;
+            background-color: rgba(0, 0, 0);
+            font-weight: 100;
+            padding: 0px 10px 10px 10px;
+            border-radius: 5px;
+            color: white;
+            opacity: 0;
+            animation: tutor 3s ease 1s 1;
+        }
+        .tutorial::before
+        {
+            content: '';
+            background-color: rgba(0, 0, 0);
+            display: flex;
+            width: 20px;
+            height: 20px;
+            position: relative;
+            bottom: 6px;
+            left: 99px;
+            transform: rotate(45deg);
+        }
+        @keyframes tutor
+        {
+            30%, 70%
+            {
+                opacity: 1;
+            }
+            100%
+            {
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -172,6 +210,7 @@
             <div class="area">
                 <label class="head">
                     Enter graph here <div class="circle-alp">i</div> :
+                    <div class="tutorial">see instructions</div>
                     <ul class="instructions">
                         <li>Tap any where to add Node</li>
                         <li>Tap on a node to select/deselect the node</li>
