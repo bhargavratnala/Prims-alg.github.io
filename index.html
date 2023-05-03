@@ -343,7 +343,7 @@
                         let curEdge = document.getElementById("i"+id);
                         curEdge.style.backgroundColor = "yellow";
                         curEdge.style.backgroundColor = "transparent";
-                        if(d[m][1] > d[v][1])
+                        if(d[m][1] > d[v][1] || d[m][1] === -1)
                         {
                             m = v;
                             mind = ind;
@@ -351,6 +351,7 @@
                     }
                 })
                 i = m;
+                console.log(d[m][0] + " " + m);
                 document.getElementById(d[m][0]).style.display = "flex";
                 setTimeout(()=>{
                     document.getElementById(m).style.display = "flex";
