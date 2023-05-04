@@ -177,6 +177,24 @@ body{
         font-size: 20px;
     }
 }
+.linkedin{
+    background-image: linear-gradient(to left,rgb(0, 122, 185), rgb(255, 255, 255));
+}
+.gmail{
+    background-image: linear-gradient(to right, rgb(0, 133, 247), rgb(255, 65, 49), rgb(0, 169, 75));
+}
+.github{
+    background-image: linear-gradient(to left, rgb(92, 107, 192), rgb(255, 255, 255));
+}
+.facebook{
+    background-image: linear-gradient(to left, rgb(24, 119, 242), rgb(255, 255, 255));
+}
+.instagram{
+    background-image: linear-gradient(to right, rgb(255, 222, 30), rgb(115, 28, 204));
+}
+.phone{
+    background-image: linear-gradient(to left, rgb(3, 168, 221), rgb(255, 255, 255));
+}
 @media (max-width:750px){
     .profile-pic{
         height: 250px;
