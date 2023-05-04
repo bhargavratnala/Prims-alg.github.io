@@ -416,17 +416,28 @@
         {
             let note = document.getElementById("note");
             note.style.display = "none";
+            let ecount = 0;
             for(i = 0; i<node.length; i++)
             {
                 let sum = 0;
                 for(j=0; j<node.length; j++)
-                sum += adjmatrix[i][j];
+                {
+                    sum += adjmatrix[i][j];
+                    if(adjmatrix[i][j] != 0)
+                    ecount++;
+                }
                 if(sum == 0)
                 {
                     note.style.display = "flex";
-                    console.log("all nodes should be connected with atleast on other node");
+                    note.innerHTML = "<span style="color: rgb(255, 20, 20); font-weight: bolder;">Note : </span> &nbsp;Cann't contain isolated node/nodes";
                     return;
                 }
+            }
+            if(ecount<=node.length)
+            {
+                note.style.display = "flex";
+                note.innerHTML = "<span style="color: rgb(255, 20, 20); font-weight: bolder;">Note : </span> &nbsp;can't contain multiple graphs";
+                return;
             }
             sloveboard.childNodes.forEach(childNode => childNode.style.display = "none");
             slovedraw.childNodes.forEach((childNode) => {
