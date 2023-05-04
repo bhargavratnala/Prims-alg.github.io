@@ -142,8 +142,9 @@ body{
     border-radius: 5px;
 }
 .name{
-    font-size: 2rem;
+    font-size: 3rem;
     color: blue;
+    text-shadow: 0 0 4px blue;
 }
 @keyframes slide{
     from{
