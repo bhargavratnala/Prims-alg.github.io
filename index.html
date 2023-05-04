@@ -429,14 +429,14 @@
                 if(sum == 0)
                 {
                     note.style.display = "flex";
-                    note.innerHTML = "<span style="color: rgb(255, 20, 20); font-weight: bolder;">Note : </span> &nbsp;Cann't contain isolated node/nodes";
+                    note.innerHTML = `<span style="color: rgb(255, 20, 20); font-weight: bolder;">Note : </span> &nbsp;Cann't contain isolated node/nodes`;
                     return;
                 }
             }
             if(ecount<=node.length)
             {
                 note.style.display = "flex";
-                note.innerHTML = "<span style="color: rgb(255, 20, 20); font-weight: bolder;">Note : </span> &nbsp;can't contain multiple graphs";
+                note.innerHTML = `<span style="color: rgb(255, 20, 20); font-weight: bolder;">Note : </span> &nbsp;can't contain multiple graphs`;
                 return;
             }
             sloveboard.childNodes.forEach(childNode => childNode.style.display = "none");
