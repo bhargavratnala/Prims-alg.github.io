@@ -7,6 +7,7 @@
 body{
     height: 100vh;
     overflow: auto !important;
+    background-color: black;
     background-image: url(https://i.pinimg.com/originals/e1/91/a8/e191a896209c083e069cc0c99b8c003d.gif);
     background-repeat: no-repeat;
     background-size: cover;
@@ -188,4 +189,7 @@ body{
         visibility: visible;
         animation: none;
     }
+/*     body{
+        background-image: url();
+    } */
 }
