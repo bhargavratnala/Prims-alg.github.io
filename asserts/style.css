@@ -9,6 +9,9 @@ body{
     height: 100vh;
     overflow: hidden;
 }
+section{
+    margin-top: 20px;
+}
 .container{
     width: 100%;
     max-height: calc(100% - 60px);
@@ -193,6 +196,81 @@ body{
     left: 10px;
     color: #00364f;
 }
+.skill{
+    flex-wrap: wrap;
+    position: relative;
+}
+.skill-card{
+    position: relative;
+    width: 200px;
+    height: 100px;
+    background-color: #B0DAFF;
+    justify-content: center;
+    border-radius: 20px;
+    margin: 10px;
+}
+.skill-card:hover{
+    border-radius: 20px 20px 0 0;
+}
+.skill-card:hover .indicator{
+    display: block;
+    animation: slide 0.5s ease 0s 1;
+}
+.indicator{
+    display: none;
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    z-index: 1;
+    background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 68, 68));
+    width: calc(var(--value)*1%);
+    border-radius: 5px;
+    height: 5px;
+}
+.indicator::after{
+    counter-reset: x var(--value);
+    content: counter(x) "%";
+    background-color: #fff;
+    position: absolute;
+    top: -28px;
+    right: -20px;
+    box-shadow: inset 0 0 5px 1px;
+    z-index: 1;
+    padding: 2px 5px;
+    border-radius: 5px;
+    color: #000;
+}
+.indicator::before{
+    content: "";
+    background-color: #fff;
+    box-shadow: inset 0 0 2px 1px;
+    position: absolute;
+    top: -12px;
+    width: 10px;
+    height: 10px;
+    right: -4px;
+    z-index: 1;
+    rotate: 45deg;
+}
+@keyframes slide {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: calc(var(--value)*1%);
+    }
+}
+.skill-title{
+    padding: 10px;
+    color: #146C94;
+    font-size: larger;
+}
+.skill-img{
+    color: #146C94;
+    font-size: 50px;
+    width: 50px;
+    height: 50px;
+}
 .project{
     flex-wrap: wrap;
 }
@@ -231,12 +309,37 @@ body{
     color: #19A7CE;
     line-height: 25px;
 }
+.project-frame{
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    min-width: 400px;
+    min-height: 400px;
+}
+.close{
+    display: none;
+}
+.close-pro-frame{
+    z-index: 1;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: calc(100% - 40px);
+    bottom: 5px;
+}
 .live{
     color: #ffffff;
     background-color: #ff3636;
     padding: 2px 5px;
     border-radius: 5px;
     margin: 0 5px;
+}
+.live-button{
+    margin: 5px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #146C94;
+    color: #fff;
 }
 .contact{
     position: relative;
@@ -255,8 +358,8 @@ body{
 }
 .contact-img{
     margin-right: 20px;
-    width: 40px;
-    height: 40px;
+    color: #146C94;
+    font-size: 40px;
 }
 .card{
     margin: 20px;
