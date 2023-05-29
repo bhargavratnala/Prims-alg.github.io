@@ -1,8 +1,3 @@
-function copyText()
-{
-    console.log("copyed");
-    navigator.clipboard.writeText("9989215406");
-}
 let more = document.getElementById("more");
 let line1 = document.getElementById("line1");
 let line2 = document.getElementById("line2");
@@ -14,3 +9,16 @@ more.addEventListener("click", ()=>{
     line3.classList.toggle("cross");
     navList.classList.toggle("nav-visible");
 });
+function openlive(url){
+    let frame = document.getElementById("pro-frame");
+    let framebut = document.getElementById("proframeclosebut");
+    frame.classList.remove("close");
+    framebut.classList.remove("close");
+    frame.setAttribute("src", url);
+}
+function closeproframe(){
+    let frame = document.getElementById("pro-frame");
+    let framebut = document.getElementById("proframeclosebut");
+    frame.classList.add("close");
+    framebut.classList.add("close");
+}
