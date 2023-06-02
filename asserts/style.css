@@ -278,8 +278,18 @@ section{
     width: 400px;
     height: 350px;
     position: relative;
+    opacity: 0;
+    left: -200px;
+    filter: blur(2px);
     flex-basis: 300px;
     margin: 10px;
+    transition: all 1s ease;
+    transition-delay: var(--delay);
+}
+.show-project-card{
+    left: 0;
+    opacity: 1;
+    filter: blur(0px);
 }
 .project-img{
     width: 300px;
