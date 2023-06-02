@@ -22,3 +22,19 @@ function closeproframe(){
     frame.classList.add("close");
     framebut.classList.add("close");
 }
+
+const observer = new IntersectionObserver(entry =>{
+    console.log(entry)
+    entry.forEach(e=>{
+        console.log(e)
+        if(e.isIntersecting){
+            e.target.classList.add("show-project-card");
+        }
+        else{
+            e.target.classList.remove("show-project-card");
+        }
+    })
+})
+const elements = document.getElementsByClassName("project-card");
+for(i=0; i<elements.length; i++)
+observer.observe(elements[i]);
