@@ -4,6 +4,7 @@ let navItems = document.getElementsByClassName("nav-item");
 let navItemscreen = document.getElementsByClassName("nav-item-screen");
 let nav =document.getElementById("nav");
 let navbut = document.getElementById("nav-but");
+let followmouse = document.getElementById("followmouse");
 let active = 0;
 
 function scrollHandler(){
@@ -45,3 +46,14 @@ function toggleData(data){
     let resumeData = document.getElementById("resume-data");
     resumeData.className = 'resume-data ' + data;
 }
+
+window.addEventListener("mousemove", (event) => {
+    let x = event.clientX;
+    let y = event.clientY;
+    let tx = window.innerWidth;
+    let ty = window.innerHeight;
+    let px = (x/tx)*100 + "%"
+    let py = (y/ty)*100 + "%"
+    followmouse.style.left = px;
+    followmouse.style.top = py;
+})

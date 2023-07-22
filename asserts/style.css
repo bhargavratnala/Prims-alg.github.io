@@ -19,6 +19,22 @@ body{
     #6DDE83 -> green
     #A5A9B0 -> grey */
 }
+.mousepad{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.followmouse{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #ffffff5a;
+    box-shadow: 0 0 40px 15px #ffffff9f;
+}
 nav{
     position: fixed;
     top: 0;
