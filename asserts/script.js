@@ -60,3 +60,7 @@ window.addEventListener("mousemove", (event) => {
     followmouse.style.left = px;
     followmouse.style.top = py;
 })
+
+window.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("loading").style.display = 'none';
+})
