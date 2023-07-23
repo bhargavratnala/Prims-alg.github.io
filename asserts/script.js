@@ -5,6 +5,7 @@ let navItemscreen = document.getElementsByClassName("nav-item-screen");
 let nav =document.getElementById("nav");
 let navbut = document.getElementById("nav-but");
 let followmouse = document.getElementById("followmouse");
+let resumeTopics = document.getElementsByClassName("resume-topic");
 let active = 0;
 
 function scrollHandler(){
@@ -42,9 +43,17 @@ function closenav(){
     navbarscreen.classList.toggle("close-nav");
 }
 
-function toggleData(data){
+function toggleData(data, c){
     let resumeData = document.getElementById("resume-data");
     resumeData.className = 'resume-data ' + data;
+    for(let i=0; i<resumeTopics.length; i++){
+        if(i==c){
+            resumeTopics[i].className = 'resume-topic resume-active';
+        }
+        else{
+            resumeTopics[i].className = 'resume-topic';
+        }
+    }
 }
 
 window.addEventListener("mousemove", (event) => {
