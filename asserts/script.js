@@ -22,12 +22,6 @@ function scrollHandler(){
             navItems[i].classList.add("active");
             navItemscreen[i].classList.add("active");
             active = 1;
-            if(i != 0){
-                nav.classList.add("nav-background");
-            }
-            else{
-                nav.classList.remove("nav-background");
-            }
         }
         else{
             navItems[i].classList.remove("active");

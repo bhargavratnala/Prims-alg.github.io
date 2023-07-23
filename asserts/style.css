@@ -40,14 +40,12 @@ nav{
     top: 0;
     width: 100%;
     max-height: 60px;
+    background-color: #1E283A;
     display: flex;
     padding: 10px;
     align-items: center;
     justify-content: space-between;
     z-index: 100;
-}
-.nav-background{
-    background-color: #1E283A;
 }
 .nav-bar{
     display: flex;
