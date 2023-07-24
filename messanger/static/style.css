@@ -1,0 +1,311 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    --primary-bg-color: #fff;
+    --primary-text-color: #000;
+    --primary-nav-color: #757575;
+    background-color: var(--primary-bg-color);
+    transition: all 0.5s;
+}
+.secondarycolor{
+    --primary-bg-color: #212529;
+    --primary-text-color: #fff;
+    --primary-nav-color: rgb(112.520718,44.062154,249.437846);
+}
+.mainbody{
+    position: relative;
+    top: 60px;
+    height: calc(100% - 60px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav{
+    position: absolute;
+    top: 0;
+    height: 60px;
+    background-color: var(--primary-nav-color);
+    width: 100%;
+    transition: all 0.5s linear;
+}
+.themebutton{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 0px 10px 1px var(--primary-text-color);
+    cursor: pointer;
+}
+.themebutton::after{
+    position: absolute;
+    content: "Theme";
+    bottom: -25px;
+    padding: 2px 5px;
+    border-radius: 5px;
+    color: var(--primary-bg-color);
+    background-color: var(--primary-text-color);
+    opacity: 0;
+}
+.themebutton:hover::after{
+    opacity: 1;
+}
+.sun{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+    border: 1px solid var(--primary-nav-color);
+    background-color: var(--primary-bg-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+.sunline{
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    border-radius: 2px;
+    background-color: var(--primary-bg-color);
+    transform: rotate(calc(45deg * var(--rotate)));
+    transition: all 0.5s;
+}
+.sunline:nth-child(odd){
+    width: 25px;
+}
+.moon ~ span{
+    display: none;
+}
+.moon::after{
+    content: "";
+    background-color: var(--primary-nav-color);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 10px 0px var(--primary-text-color);
+    border-radius: 10px;
+    padding: 5px 10px;
+    width: max(50%, 100px);
+    height: max(50%, 200px);
+    background-color: var(--primary-bg-color);
+}
+.nav-title{
+    font-size: 40px;
+    display: flex;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-text-color);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.head{
+    font-size: 2rem;
+    padding: 40px 0;
+    color: var(--primary-text-color);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.roombutton{
+    padding: 5px 0;
+    text-decoration: none;
+    color: grey;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.roombutton:hover{
+    color: var(--primary-text-color);
+}
+.entrybox{
+    position: absolute;
+    opacity: 1;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+    background-color: #000000a8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s;
+}
+.input-box{
+    width: 60%;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 30px;
+    padding: 10px;
+}
+.button{
+    padding: 10px;
+    font-size: 1rem;
+    margin: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.close{
+    opacity: 0;
+    transform: scale(0.5, 0.5);
+    border-radius: 20px;
+    z-index: -1;
+}
+#title{
+    padding: 5px;
+    color: var(--primary-text-color);
+}
+#errormsg, #roomerrormsg{
+    color: red;
+}
+.messangerApplication{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-bg-color);
+    transition: all 0.5s linear;
+}
+.msgApp{
+    display: block;
+}
+.chattitle{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    height: 40px;
+}
+.namebox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-text-color);
+    font-size: 2rem;
+}
+.roomcode{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-text-color);
+    font-size: 2rem;
+}
+.chatbox{
+    padding: 5px 0px;
+    height: calc(100% - 100px);
+    overflow-x: scroll;
+    border-top: 1px solid var(--primary-text-color);
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+.chatbox::-webkit-scrollbar{
+    display: none;
+}
+.messagesender{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+}
+.msginput{
+    height: 40px;
+    width: calc(100% - 100px);
+    padding: 5px;
+    background-color: transparent;
+    border: 1px solid #989898;
+    color: var(--primary-text-color);
+    border-radius: 3px;
+    resize: none;
+    scrollbar-width: none;
+}
+.msginput::-webkit-scrollbar{
+    display: none;
+}
+.sendinput{
+    width: 60px;
+    padding: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.msg{
+    position: relative;
+    background-color: var(--primary-bg-color);
+    padding: 10px;
+    margin-top: 5px;
+    color: var(--primary-text-color);
+    border: 2px solid var(--primary-text-color);
+    width: fit-content;
+    max-width: 50%;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    word-break: break-all;
+}
+.recivemsg{
+    left: 10px;
+}
+.servermsg{
+    left: 50%;
+    padding: 5px;
+    transform: translateX(-50%);
+}
+.servermsg span{
+    font-size: 1rem !important;
+}
+.servermsg .sendername{
+    color: red;
+}
+.sendmsg{
+    left: 100%;
+    transform: translateX(calc(-100% - 10px));
+}
+.sendername{
+    color: blue;
+    font-size: 1rem;
+}
+@media (max-width:700px) {
+    .nav-title{
+        justify-content: start;
+        padding: 10px;
+        font-size: 30px;
+    }
+    .namebox{
+        font-size: 1.5rem;
+    }
+    .roomcode{
+        font-size: 1.5rem;
+    }
+}
+@media (max-width:350px) {
+    .nav-title{
+        justify-content: start;
+        padding: 10px;
+        font-size: 20px;
+    }
+    .namebox{
+        font-size: 1rem;
+    }
+    .roomcode{
+        font-size: 1rem;
+    }
+    #title{
+        font-size: 1rem;
+    }
+}
