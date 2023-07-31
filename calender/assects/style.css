@@ -15,20 +15,11 @@ body{
     width: 100%;
     height: 100%;
 }
-.content{
-    display: flex;
-    position: relative;
-    width: 50%;
-    height: 50%;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
 .title{
-    position: absolute;
+    position: relative;
     font-size: 3rem;
     font-weight: bold;
-    top: 20px;
+    bottom: 200px;
     margin: 10px;
 }
 .month-year{
@@ -87,7 +78,6 @@ body{
     display: block;
     min-width: 400px;
     position: absolute;
-    top: 100px;
     max-width: 600px;
     width: 50%;
     padding: 5px;
