@@ -247,7 +247,7 @@ section{
     width: 350px;
     display: flex;
     background-color: #1E283A;
-    margin: 10px;
+    margin: 20px;
     flex: 1.5 300px 0;
     flex-direction: column;
     justify-content: center;
