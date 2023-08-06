@@ -54,6 +54,8 @@ function prevMonth(){
 function loadDate(){
     let prevEnd = prevMonth().getDate();
     let presDay = date.getDay() - curDate%7 + 1;
+    if(presDay < 0)
+    presDay = 7 + presDay;
     let i = 0;
     let n = new Date(year, month+1,0).getDate();
     while(i<n+presDay | i%7!=0){
