@@ -512,4 +512,7 @@ section{
     .card{
         width: 300px;
     }
+    .resume-topic{
+        font-size: 1rem;
+    }
 }
