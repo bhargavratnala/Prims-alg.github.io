@@ -235,6 +235,35 @@ footer{
     object-fit: cover;
     border-radius: 50%;
 }
+.admission-list li{
+    background-color: transparent !important;
+    color: #000 !important;
+    margin: 30px 20px !important;
+}
+.admission-list .square{
+    top: 30px;
+    background-color: #265A92 !important;
+    height: 30px !important;
+    width: 20px !important;
+}
+table{
+    width: calc(100% - 120px);
+    margin: 10px 60px;
+    border-collapse: collapse;
+}
+table tr th{
+    text-align: start;
+    padding: 10px;
+    background-color: #265A92;
+    color: #fff;
+}
+table tr td{
+    background-color: #F4F4F4;
+    padding: 10px;
+}
+table tr:nth-child(odd) td{
+    background-color: #E9E9E9;
+}
 @media (max-width: 1200px){
     .about-landing{
         height: 70vh;
