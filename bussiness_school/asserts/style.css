@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: 'Satoshi', sans-serif;
     scroll-behavior: smooth;
+    /* text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3); */
 }
 body{
     height: 100vh;
@@ -15,16 +16,18 @@ body{
 }
 body::-webkit-scrollbar{
     /* display: none; */
-    width: 8px;
-    background-color: #265A92;
+    width: 10px;
+    background-color: #fff;
 }
 body::-webkit-scrollbar-thumb{
-    background: #fff;
+    background: #265A92;
 }
 nav{
-    position: relative;
+    position: absolute;
     height: 60px;
+    width: 100%;
     background: linear-gradient(270deg, #013974 0%, #265A92 104.55%);
+    border-radius: 0 0 0 60px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     background-color: #013974;
     z-index: 10;
@@ -40,6 +43,9 @@ nav ul li{
     list-style: none;
     color: #fff;
 }
+nav ul li:first-child{
+    margin-left: 30px;
+}
 nav ul li a{
     color: #FFF;
     text-decoration: none;
@@ -54,7 +60,7 @@ nav ul li a{
     position: absolute;
     top: 100%;
     right: 0;
-    width: min(60%, 500px);
+    width: min(60%, 600px);
     border-radius: 0px 0px 0px 30px;
     background: linear-gradient(270deg, #F7941D 0%, #FFA438 104.55%);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -65,7 +71,7 @@ nav ul li a{
 }
 .landing-img{
     width: 100%;
-    height: calc(50vh - 65px);
+    height: 50vh;
     object-fit: cover;
 }
 .welcome{
@@ -317,13 +323,51 @@ table tr:nth-child(odd) td{
     color: #fff;
     border-radius: 20px;
 }
-
-@media (max-width: 1200px){
+.faculty-container{
+    width: 100%;
+    display: flex;
+}
+.side-nav{
+    width: 300px;
+    background-color: #265A92;
+}
+.faculty-container .team-card{
+    background-color: #D9D9D9;
+    color: #000;
+}
+.side-nav-item{
+    margin: 25px;
+    background-color: #F7F7F7;
+    padding: 5px;
+    text-align: center;
+    border-radius: 30px;
+    font-weight: bold;
+}
+.contact-details{
+    margin-left: 40px;
+}
+.contact-details p{
+    margin: 5px 0;
+}
+.social-icons a svg{
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+}
+.link{
+    color: inherit;
+}
+@media (max-width: 1400px){
     .about-landing{
         height: 70vh;
     }
 }
-@media (max-width: 800px){
+@media (max-width: 1200px){
+    .about-landing{
+        height: 75vh;
+    }
+}
+@media (max-width: 1000px){
     .about-text{
         position: relative;
         top: 0;
@@ -335,5 +379,18 @@ table tr:nth-child(odd) td{
     }
     .philosophy-text{
         margin: 10px;
+    }
+}
+@media (max-width: 800px){
+    .faculty-container{
+        flex-direction: column;
+    }
+    .side-nav{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+    }
+    .side-nav-item{
+        padding: 5px 20px;
     }
 }
