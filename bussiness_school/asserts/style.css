@@ -158,6 +158,7 @@ footer{
 .about-landing-img{
     position: absolute;
     height: 75%;
+    object-fit: cover;
     z-index: -1;
 }
 .about-text{
