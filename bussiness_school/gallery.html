@@ -5,7 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
     <link rel="stylesheet" href="./asserts/style.css">
+    <style>
+        .slick-next, .slick-prev{
+            background-color: transparent;
+            fill: #fff;
+            border: none;
+        }
+        .team-card, .slick-list, .slick-track{
+            height: fit-content;
+        }
+        .slick-track{
+            display: flex !important;
+            align-items: center;
+        }
+        .team-card-img{
+            width: calc(100% - 40px);
+            height: fit-content;
+            border-radius: 0;
+            margin: 20px;
+            object-fit: contain;
+            /* object-position: top; */
+            background-color: transparent;
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -53,28 +77,30 @@
         </div>
     </div>
     <div class="card-container">
-        <div class="team-card" style="--flex-direction: row-reverse; --width: 300px; --border-radius: 50%;">
+        <div class="team-card slick-slider" style="--flex-direction: row-reverse; --width: 300px; --border-radius: 50%;">
             <div>
-                <img src="./asserts/contact.jpg" alt="team member" class="team-card-img">
+                <img src="./asserts/Dr. Ramesh Darbha GM - Country Head (India), Backbase and Executive-in-Residence- September 2022 (2).JPG" alt="team member" class="team-card-img">
             </div>
             <div>
-                <img src="./asserts/contact.jpg" alt="team member" class="team-card-img">
-            </div>
-        </div>
-        <div class="team-card" style="--flex-direction: row-reverse; --width: 300px; --border-radius: 50%;">
-            <div>
-                <img src="./asserts/contact.jpg" alt="team member" class="team-card-img">
+                <img src="./asserts/Mr. Ashwani Lohani (CEO, GMR Varlakshmi Foundation and GMRSB)- May 2023 (2).JPG" alt="team member" class="team-card-img">
             </div>
             <div>
-                <img src="./asserts/contact.jpg" alt="team member" class="team-card-img">
-            </div>
-        </div>
-        <div class="team-card" style="--flex-direction: row-reverse; --width: 300px; --border-radius: 50%;">
-            <div>
-                <img src="./asserts/contact.jpg" alt="team member" class="team-card-img">
+                <img src="./asserts/Dr. Rhonda Lenton, President, York University (2).JPG" alt="team member" class="team-card-img">
             </div>
             <div>
-                <img src="./asserts/contact.jpg" alt="team member" class="team-card-img">
+                <img src="./asserts/Mr. Ashwani Lohani (CEO, GMR Varlakshmi Foundation and GMRSB)- May 2023 (2).JPG" alt="team member" class="team-card-img">
+            </div>
+            <div>
+                <img src="./asserts/Dr. Ramesh Darbha GM - Country Head (India), Backbase and Executive-in-Residence- September 2022 (3).JPG" alt="team member" class="team-card-img">
+            </div>
+            <div>
+                <img src="./asserts/Mr. Detlev Zwick, Dean, Schulich School of Business- January 2023 (2).JPG" alt="team member" class="team-card-img">
+            </div>
+            <div>
+                <img src="./asserts/Dr. Rhonda Lenton, President, York University (4).JPG" alt="team member" class="team-card-img">
+            </div>
+            <div>
+                <img src="./asserts/BTR (Student Housing).jpg" alt="team member" class="team-card-img">
             </div>
         </div>
     </div>
@@ -82,4 +108,26 @@
         <img src="./asserts/gallery-footer.jpeg" alt="footer image" class="footer-img">
     </footer>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.slick-slider').slick({
+            autoplay:true,
+            autoplaySpeed:1500,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            prevArrow: `<button class="slick-prev" aria-label="Previous" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" style="width: 20px; height: 20px;">
+                    <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/>
+                </svg>
+            </button>`,
+            nextArrow: `<button class="slick-next" aria-label="Next" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" style="width: 20px; height: 20px;">
+                    <path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
+                </svg>
+            </button>`,
+        });
+    });
+</script>
 </html>
